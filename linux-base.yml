@@ -1,0 +1,13 @@
+---
+
+- name: Configure system
+  hosts: all
+  become: true
+  roles:
+    - common
+    - geerlingguy.pip
+
+- name: Configure user environment
+  hosts: all
+  roles: 
+    - nice_user_environment

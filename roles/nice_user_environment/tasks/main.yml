@@ -1,0 +1,2 @@
+- name: Nice user environment
+  include: ../../common/tasks/bashrc_configuration.yml

@@ -1,0 +1,17 @@
+- name: Colorize the terminal
+  lineinfile: 
+    path: '~/.bashrc'
+    regexp: 'force_color_prompt=.*$'
+    line: 'force_color_prompt=yes'
+
+- name: Extend the history size
+  lineinfile:
+    path: '~/.bashrc'
+    regexp: '^HISTSIZE=.*$'
+    line: 'HISTSIZE=""'
+
+- name: Extend the history file size
+  lineinfile:
+    path: '~/.bashrc'
+    regexp: '^HISTFILESIZE=.*$'
+    line: 'HISTFILESIZE=""'
